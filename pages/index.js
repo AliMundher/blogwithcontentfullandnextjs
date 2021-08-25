@@ -1,11 +1,14 @@
 import { createClient } from 'contentful';
+import BlogList from '../components/blogList';
 
 
 export default function Home({ blogs }) {
-  console.log(blogs)
+
   return (
     <div className="container">
-      <h1 className="btn btn-primary">home</h1>
+      {
+        blogs.map(blog => <BlogList blog={blog} key={blog.sys.id} />)
+      }
     </div>
   )
 }
