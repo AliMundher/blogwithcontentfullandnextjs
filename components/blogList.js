@@ -6,7 +6,6 @@ import moment from 'moment';
 
 
 function BlogList({ blog }) {
-    console.log(blog)
     const { slug, title, thumbnail, body, rating } = blog.fields;
     const { createdAt } = blog.sys;
     return (

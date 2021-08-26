@@ -35,3 +35,22 @@
 .logo {
     color: #343a40d9;
 }
+
+.notfound {
+    font-size: 5em;
+    color: #777;
+}
+
+.oops {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.home {
+    font-size: 1.2em;
+}
+
+.home a {
+    text-decoration: none;
+    font-weight: bold;
+}
