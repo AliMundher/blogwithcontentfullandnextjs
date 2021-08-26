@@ -53,6 +53,15 @@ export default function Details({ blog }) {
                         alt={title} className="rounded-2 mt-5 mb-3" />
                     <h3 className={styles.title}>{title}</h3>
                     <p className="text mt-5">{documentToReactComponents(body)}</p>
+                    <div className="row">
+                        <div className="col">
+                            {
+                                category.map(cat => <span key={cat} className={styles.starts}>
+                                    <i className="bi bi-bookmark-fill"></i>&nbsp;{cat} &nbsp;
+                                </span>)
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
