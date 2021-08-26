@@ -6,25 +6,32 @@
     text-decoration: none;
     line-height: 1.2;
     display: block;
+    color: #343a40d9;
 }
 
 .my_text {
     color: #777;
 }
 
-.heart {
-    color: #0d6efd;
-}
-
-.comment {
-    color: #0d6efd;
-}
-
 .starts {
     color: #0d6efd;
+}
+
+.starColor {
+    color: #777;
 }
 
 .moon {
     font-size: 0.9em;
     color: #777;
+}
+
+.title_details {
+    margin: 20px 0;
+    font-size: 2.2em;
+    color: #343a40d9;
+}
+
+.logo {
+    color: #343a40d9;
 }

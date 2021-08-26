@@ -7,7 +7,7 @@ import moment from 'moment';
 
 function BlogList({ blog }) {
     console.log(blog)
-    const { slug, title, thumbnail, body } = blog.fields;
+    const { slug, title, thumbnail, body, rating } = blog.fields;
     const { createdAt } = blog.sys;
     return (
         <div className="row justify-content-center my-4">
@@ -31,19 +31,19 @@ function BlogList({ blog }) {
                             <hr />
                             <div className="row text-center">
                                 <div className="col">
-                                    <span className={styles.heart}>
+                                    <span className={styles.starColor}>
                                         <i className="bi bi-heart-fill"></i>
                                         <span>&nbsp;20</span>
                                     </span>
                                 </div>
                                 <div className="col mb-2 mb-md-0">
-                                    <span className={styles.comment}>
+                                    <span className={styles.starColor}>
                                         <i className="bi bi-chat-fill"></i>
                                         <span>&nbsp;12</span>
                                     </span>
                                 </div>
                                 <div className="col-md-4">
-                                    <span className={styles.comment}>
+                                    <span className={styles.starColor}>
                                         <i className="bi bi-calendar-fill"></i>
                                         &nbsp;<span>{moment(createdAt).calendar()}</span>
                                     </span>

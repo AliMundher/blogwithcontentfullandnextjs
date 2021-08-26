@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
 
 
 export default function Details({ blog }) {
-    const { title, body, thumbnail, category } = blog.fields;
+    const { title, body, thumbnail, category, rating } = blog.fields;
 
     return (
         <div className="container">
@@ -50,18 +50,39 @@ export default function Details({ blog }) {
                     <Image src={`http:${thumbnail.fields.file.url}`}
                         width={thumbnail.fields.file.details.image.width}
                         height={thumbnail.fields.file.details.image.height}
-                        alt={title} className="rounded-2 mt-5 mb-3" />
-                    <h3 className={styles.title}>{title}</h3>
-                    <p className="text mt-5">{documentToReactComponents(body)}</p>
+                        alt={title} className="mt-5 mb-3" />
+                    <h3 className={styles.title, styles.title_details}>{title}</h3>
+                    <hr />
                     <div className="row">
-                        <div className="col">
+                        <div className="col-md-3">
                             {
                                 category.map(cat => <span key={cat} className={styles.starts}>
                                     <i className="bi bi-bookmark-fill"></i>&nbsp;{cat} &nbsp;
                                 </span>)
                             }
                         </div>
+                        <div className="col-md-3">
+                            <span className={styles.starts}>Evaluation:&nbsp;</span>
+                            {
+                                rating > 1 ?
+                                    <span className={styles.starts}>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star"></i>
+                                        <i className="bi bi-star"></i>
+                                    </span> : <span className={styles.starts}>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star"></i>
+                                        <i className="bi bi-star"></i>
+                                        <i className="bi bi-star"></i>
+                                    </span>
+                            }
+                        </div>
                     </div>
+                    <hr />
+
+                    <p className="text mt-5">{documentToReactComponents(body)}</p>
+
                 </div>
             </div>
         </div>
