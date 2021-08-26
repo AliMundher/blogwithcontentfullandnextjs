@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
@@ -42,6 +42,7 @@ export async function getStaticProps({ params }) {
 
 
 export default function Details({ blog }) {
+    if (!blog) return <h2>Loading..</h2>
     const { title, body, thumbnail, category, rating } = blog.fields;
 
     return (
