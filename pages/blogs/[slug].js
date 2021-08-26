@@ -32,6 +32,15 @@ export async function getStaticProps({ params }) {
         content_type: 'blog',
         'fields.slug': params.slug
     })
+    if (items.length <= 0) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false
+            }
+        }
+    }
+
     return {
         props: {
             blog: items[0]
@@ -42,7 +51,7 @@ export async function getStaticProps({ params }) {
 
 
 export default function Details({ blog }) {
-    if (!blog) return <h2>Loading..</h2>
+    if (!blog) return <h2 className="text-center">Loading..</h2>
     const { title, body, thumbnail, category, rating } = blog.fields;
 
     return (
