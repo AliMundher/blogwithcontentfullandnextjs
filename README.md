@@ -12,3 +12,5 @@ As for the front-end, it connects to the content management system and then disp
 * Contentful Headless CMS
 * Bootstrap5
 * Bootstrap-icons
+
+[Demo](https://blogwithcontentfullandnextjs.vercel.app/)
