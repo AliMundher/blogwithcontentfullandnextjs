@@ -54,3 +54,20 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+.skelton_img {
+    animation: skelton-load 1s linear infinite alternate;
+}
+
+@keyframes skelton-load {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.image {
+    margin: 50px 0 25px 0!important;
+}

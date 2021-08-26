@@ -61,7 +61,7 @@ export default function Details({ blog }) {
                     <Image src={`http:${thumbnail.fields.file.url}`}
                         width={thumbnail.fields.file.details.image.width}
                         height={thumbnail.fields.file.details.image.height}
-                        alt={title} className="mt-5 mb-3" />
+                        alt={title} className={styles.skelton_img, styles.image} />
                     <h3 className={styles.title, styles.title_details}>{title}</h3>
                     <hr />
                     <div className="row">
